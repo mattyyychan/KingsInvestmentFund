@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd European LSTM Portfolio Project: Core infrastructure and utilities\n\nThis commit establishes the foundation for an academic-grade European equity\nportfolio using LSTM neural networks with Maximum Sharpe optimization.\n\nFeatures added:\n- Complete project structure \\(data/, notebooks/, src/\\)\n- config.py: Comprehensive configuration with Colab auto-detection\n- requirements.txt: All dependencies \\(TensorFlow, CVXPY, WRDS, etc.\\)\n- src/data_loader.py: WRDS Compustat utilities and macro data download\n- src/features.py: PCA, technical indicators, systematic risk removal\n- src/models.py: LSTM architecture with early stopping for CPU efficiency\n- src/optimization.py: Max Sharpe CVXPY solver with sector constraints\n- README.md: Complete setup guide for Colab Pro and local execution\n\nTechnical highlights:\n✓ Google Colab Pro ready \\(GPU auto-detection, Drive mounting\\)\n✓ Zero look-ahead bias \\(scalers/PCA fit on training data only\\)\n✓ Rolling beta calculation for residual returns \\(alpha isolation\\)\n✓ Ledoit-Wolf covariance shrinkage for stability\n✓ Transaction costs \\(10 bps\\) and monthly rebalancing\n✓ 44-50 stock universe \\(balanced across 11 GICS sectors\\)\n\nNext steps: Build 5 Jupyter notebooks \\(universe selection, feature engineering,\nLSTM training, portfolio optimization, performance analysis\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(gh pr create:*)"
+    ]
+  }
+}
